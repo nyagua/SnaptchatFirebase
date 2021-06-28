@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6fb-8v-hhf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Upload Image View Controller-->
+        <scene sceneID="1x4-wP-tBd">
+            <objects>
+                <viewController id="6fb-8v-hhf" customClass="UploadImageViewController" customModule="SnapchatFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CNw-2Z-hRb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Iv-Wf-Rj0">
+                                <rect key="frame" x="48.5" y="155" width="315.5" height="349.5"/>
+                                <color key="tintColor" red="0.54141684720000005" green="0.84029101169999998" blue="0.89953758429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="a4C-2H-fsO"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxU-Rw-XcK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FfO-HG-OKr"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Post Image" id="yw7-7g-3sX">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow-left" id="yXy-cK-ase">
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NY-B4-Tlm">
+                                <rect key="frame" x="80" y="565" width="254" height="37"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Select Image">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImageButton:" destination="6fb-8v-hhf" eventType="touchUpInside" id="fdi-17-aYU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-Qc-6vl">
+                                <rect key="frame" x="80" y="662" width="254" height="37"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Post Snap">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postImageButton:" destination="6fb-8v-hhf" eventType="touchUpInside" id="7Rd-gu-cft"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2dV-Si-qfC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dcb-Qc-6vl" firstAttribute="leading" secondItem="2dV-Si-qfC" secondAttribute="leading" constant="80" id="26b-kC-tnk"/>
+                            <constraint firstItem="1Iv-Wf-Rj0" firstAttribute="top" secondItem="QxU-Rw-XcK" secondAttribute="bottom" constant="66" id="3Lv-T6-6ZF"/>
+                            <constraint firstItem="1Iv-Wf-Rj0" firstAttribute="leading" secondItem="2dV-Si-qfC" secondAttribute="leading" constant="50" id="8tx-hj-4ja"/>
+                            <constraint firstItem="3NY-B4-Tlm" firstAttribute="leading" secondItem="2dV-Si-qfC" secondAttribute="leading" constant="80" id="BXW-Gf-maw"/>
+                            <constraint firstItem="dcb-Qc-6vl" firstAttribute="top" secondItem="3NY-B4-Tlm" secondAttribute="bottom" constant="60" id="EFv-WV-uh5"/>
+                            <constraint firstItem="2dV-Si-qfC" firstAttribute="trailing" secondItem="3NY-B4-Tlm" secondAttribute="trailing" constant="80" id="LE5-Xc-O5K"/>
+                            <constraint firstItem="QxU-Rw-XcK" firstAttribute="top" secondItem="2dV-Si-qfC" secondAttribute="top" id="OYp-sF-AZE"/>
+                            <constraint firstItem="3NY-B4-Tlm" firstAttribute="top" secondItem="1Iv-Wf-Rj0" secondAttribute="bottom" constant="60" id="PFv-px-ssi"/>
+                            <constraint firstItem="2dV-Si-qfC" firstAttribute="trailing" secondItem="dcb-Qc-6vl" secondAttribute="trailing" constant="80" id="T2m-13-OhR"/>
+                            <constraint firstItem="QxU-Rw-XcK" firstAttribute="leading" secondItem="2dV-Si-qfC" secondAttribute="leading" id="eEs-uD-C4a"/>
+                            <constraint firstItem="2dV-Si-qfC" firstAttribute="trailing" secondItem="1Iv-Wf-Rj0" secondAttribute="trailing" constant="50" id="j1Y-r2-vsQ"/>
+                            <constraint firstItem="QxU-Rw-XcK" firstAttribute="trailing" secondItem="2dV-Si-qfC" secondAttribute="trailing" id="x9r-xb-Shq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="1Iv-Wf-Rj0" id="TeO-e0-Pvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpq-mA-dW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84.057971014492765" y="30.803571428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow-left" width="32" height="32"/>
+        <image name="person.crop.circle.fill.badge.plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
